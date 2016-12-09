@@ -23,6 +23,7 @@
     "backbone.radio": "^2.0.0",
     "bootstrap-sass": "^3.3.7",
     "browserify": "^13.1.1",
+    "connect-pushstate": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-sass": "^2.3.2",

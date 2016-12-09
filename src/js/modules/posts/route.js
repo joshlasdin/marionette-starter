@@ -1,6 +1,6 @@
 const bb = require('backbone');
 const Radio = require('backbone.radio');
-const AboutView = require('./view');
+const PostsView = require('./view');
 const PostsCollection = require('../../entities/posts/collection');
 
 module.exports = bb.Blazer.Route.extend({
@@ -10,8 +10,7 @@ module.exports = bb.Blazer.Route.extend({
     },
 
     execute(routeData) {
-        console.log('doin it');
-        Radio.request('root', 'body', new AboutView({
+        Radio.request('root', 'body', new PostsView({
             collection: routeData.posts,
         }));
     },

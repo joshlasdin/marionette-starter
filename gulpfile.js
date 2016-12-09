@@ -11,6 +11,7 @@ const buffer = require('vinyl-buffer');
 const gutil = require('gulp-util');
 const sourcemaps = require('gulp-sourcemaps');
 const connect = require('gulp-connect');
+const pushstate = require('connect-pushstate');
 const sass = require('gulp-sass');
 const args = require('yargs').argv;
 
@@ -25,6 +26,11 @@ gulp.task('connect', () => {
     connect.server({
         root: './dist',
         livereload: true,
+        middleware: function(connect, opt) {
+            return [
+                pushstate()
+            ];
+        },
     });
 });
 
